@@ -1,0 +1,38 @@
+
+1. Views  folder= cat.jsp + dog.jsp (in WEB-INF folder inside Webcontent folder)
+2. Static folder = inside WebContent folder
+3. web.xml = in WEB-INF folder inside WebContent folder
+    - Web.xml servlet name = Index 
+
+4. com.krista.pets.controllers Controllers = index.java, ShowCat.java, ShowDog.java (in src directory, name after com.krista.pets.controllers)
+    i.e. Index.java:
+    index.java
+    -doGet
+        - requestDispatcher view = request.getRequestDispatcher("index.html");
+            - render index.html inside WebContent folder but outside of Web-INF
+    -doPost
+        - soGet(request,response)
+
+7. in index.html (inside WEB-INF folder)
+    - method get action = "/Pets/animals/dog" 
+
+
+5. com.krista.pets.models Models (beans) = Animal.java, Pet.java (in src directory, name after com.krista.models)
+    Animal.java = main class
+    Pet.java = interface of Animal.java
+        Animal dog = new Animal(name, breed, weight);
+        Animal cat = new animal(name, breed, weight);
+
+
+6. FOR ROUTING**
+    in web.xml url-pattern ex. /animals/dog 
+        - access by: Pets/animal/dog?name=Ramin&breed=Noodle&weight=123 
+        - run from ShowDog.java file to check 
+    in showDog.java ex. ("/WEB-INF/views/Dog.jsp")
+    To check routing --> pass in parameter in web url
+
+
+
+
+
+
